@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
             <h1>Arzu</h1>
+        </div>
             <nav>
                 <ul class="navigation">
                     <li><a href="#">Home</a></li>
@@ -20,13 +22,14 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+        
     </header>
 
     <section class="hero">
         <h2>Arzu Cakir</h2>
         <p>Frontend Developer</p>
-        <button>[View My Projects]</button>
+        <button id="view-projects">[View My Projects]</button>
+        <button id="dark-mode">Dark Mode 🌙</button>
     </section>
 
     <section class="about">
@@ -44,11 +47,14 @@
         </ul>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2>Projects</h2>
+
+        <div class="project-container">
         <div class="card">Proje 1 </div>
         <div class="card">Proje 2</div>
         <div class="card">Proje 3</div>
+        </div>
     </section>
 
     <section class="contact">
@@ -69,4 +75,5 @@
 
 </body>
 
+<script src="script.js"></script>
 </html>
