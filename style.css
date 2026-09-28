@@ -107,6 +107,11 @@ footer{
     transform: scale(1.05);
 }
 
+.dark {
+    background-color: #222;
+    color: white;
+}
+
 @media (max-width: 768px) {
  header{
     display: flex;
