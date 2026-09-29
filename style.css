@@ -108,6 +108,8 @@ display: flex;
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border-radius: 10px;
     flex: 1;
@@ -154,6 +156,19 @@ display: flex;
 
 }
 
+.contact a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.contact a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
 footer{
     padding: 20px;
     text-align: center;
@@ -179,6 +194,55 @@ footer{
     color: var(--card-color);
 }
 
+.project-links{
+    display: flex;
+    gap: 10px;
+    top: 20px;
+    margin-top: auto;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#darkModeBtn {
+    padding: 10px 16px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#darkModeBtn:hover {
+    background-color: var(--accent-color);
+    color: var(--card-color);
+}
+
+
+.project-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+.project-links a:hover {
+    color: var(--text-color);
+    transform: translateX(3px);
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--accent-color);
+}
+
 @media (max-width: 768px) {
  header{
     display: flex;
@@ -198,6 +262,13 @@ footer{
  .card{
     flex: 1 1 100%;
  }
+
+ .about,
+.contact {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -207,6 +278,14 @@ footer{
         gap: 20px;
         flex-wrap: wrap;
     }
+
+    .hero h2 {
+    font-size: 28px;
+}
+
+.project-links {
+    flex-direction: column;
+}
 }
 
 

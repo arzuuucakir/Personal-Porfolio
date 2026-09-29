@@ -4,77 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Arzu Cakir | Frontend Developer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
+
         <div class="logo">
             <h1>Arzu</h1>
         </div>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <button id="darkModeBtn" class="dark">Dark Mode 🌙</button>
-        
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+
     </header>
 
-    <section class="hero">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
         <h2>Arzu Cakir</h2>
+
         <p>Frontend Developer</p>
-        <button id="view-projects">[View My Projects]</button>
-        
+
+        <button id="view-projects">
+            View My Projects
+        </button>
+
     </section>
 
-    <section class="about">
-        <p>I am a motivated Frontend Developer with a background in Computer Science. I enjoy building responsive and
-            user-friendly websites with HTML, CSS, JavaScript, and React. I am always learning and improving my skills.
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <p>
+            I am a motivated Frontend Developer with a background in Computer Science.
+            I enjoy building responsive and user-friendly websites with HTML, CSS,
+            JavaScript, and React. I am always learning and improving my skills.
         </p>
+
     </section>
 
-    <section class="skills">
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+
         <h2>Skills</h2>
+
         <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
+            <li>React</li>
         </ul>
+
     </section>
 
+
+    <!-- Projects -->
     <section class="projects" id="projects">
+
         <h2>Projects</h2>
 
         <div class="project-container">
-        <div class="card">Proje 1 </div>
-        <div class="card">Proje 2</div>
-        <div class="card">Proje 3</div>
+
+            <!-- Project 1 -->
+            <div class="card">
+
+                <h3>Arzu Coffee</h3>
+
+                <p>
+                    A responsive coffee website built with HTML and CSS,
+                    featuring a modern layout, menu section and contact form.
+                </p>
+
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub →</a>
+                    <a href="#" target="_blank">Live Demo →</a>
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="card">
+
+                <h3>Desire Perfume</h3>
+
+                <p>
+                    A modern perfume landing page designed with HTML and CSS,
+                    focusing on responsive design and elegant visual presentation.
+                </p>
+
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub →</a>
+                    <a href="#" target="_blank">Live Demo →</a>
+                </div>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="card">
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal portfolio website built with HTML, CSS and JavaScript,
+                    featuring dark mode, interactive buttons and responsive design.
+                </p>
+
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub →</a>
+                    <a href="#" target="_blank">Live Demo →</a>
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
-    <section class="contact">
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
         <h2>Contact</h2>
+
         <a href="mailto:arzucakir771@gmail.com">
             arzucakir771@gmail.com
         </a>
-        <a href="#">Instagram</a>
-        <a href="#">Whatsapp</a>
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            WhatsApp
+        </a>
+
     </section>
 
+
+    <!-- Footer -->
     <footer>
-        <p>Arzu Cakir Web Developer</p>
+
+        <p>
+            Arzu Cakir Web Developer
+        </p>
+
     </footer>
 
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
-<script src="script.js"></script>
 </body>
-
 
 </html>
