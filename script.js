@@ -2,6 +2,10 @@ const viewProjects = document.getElementById("view-projects");
 const projects = document.getElementById("projects");
 const darkModeBtn = document.getElementById("darkModeBtn");
 const heroTitle = document.getElementById("heroTitle");
+const increaseBtn = document.getElementById("increaseBtn");
+const counter = document.getElementById("counter");
+const likeBtn = document.getElementById("likeBtn");
+const likes = document.getElementById("likes");
 
 
 // DOM
@@ -52,4 +56,37 @@ function showWelcomeMessage() {
 function sayHello(name){
     console.log("Hello" + name + "! 👋");
     sayHello("Arzu")
+}
+
+function changeTitle(){
+    heroTitle.textContent = "Welcome to my Portfolio! 🚀"
+}
+
+
+viewProjects.addEventListener("click" , () => {
+changeTitle()
+
+
+
+})
+
+let count = 0;
+
+function increaseCount(){
+    count = count + 1;
+    console.log(count);
+    
+}
+
+
+increaseBtn.addEventListener("click" , () => {
+    increaseCount();
+    counter.textContent = count;
+})
+
+let likeCount = 0;
+
+function addLike(){
+    likeCount = likeCount +1;
+    likes.textContent = likeCount + " ❤️";
 }
