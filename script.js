@@ -6,6 +6,11 @@ const increaseBtn = document.getElementById("increaseBtn");
 const counter = document.getElementById("counter");
 const likeBtn = document.getElementById("likeBtn");
 const likes = document.getElementById("likes");
+const taskInput = document.getElementById("taskInput")
+const addTaskBtn = document.getElementById("addTaskBtn")
+const taskList = document.getElementById("taskList")
+const deleteBtn = document.createElement("button");
+
 
 
 // DOM
@@ -49,14 +54,16 @@ darkModeBtn.addEventListener("click", function () {
 
 });
 
-function showWelcomeMessage() {
+function showWelcomeMessage(name) {
     console.log("Welcome to " + name + "'s Portfolio! 🚀");
 }
 
 function sayHello(name){
     console.log("Hello" + name + "! 👋");
-    sayHello("Arzu")
+   
 }
+
+ sayHello("Arzu")
 
 function changeTitle(){
     heroTitle.textContent = "Welcome to my Portfolio! 🚀"
@@ -90,3 +97,32 @@ function addLike(){
     likeCount = likeCount +1;
     likes.textContent = likeCount + " ❤️";
 }
+
+
+console.log(taskInput);
+console.log(addTaskBtn);
+console.log(taskList);
+
+
+addTaskBtn.addEventListener("click", () => {
+
+    const task = taskInput.value;
+
+    const li = document.createElement("li");
+    li.textContent = task;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+
+    li.addEventListener("click", () => {
+        li.style.textDecoration = "line-through";
+    });
+
+    deleteBtn.addEventListener("click", () => {
+        li.remove();
+    });
+
+});
