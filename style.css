@@ -1,7 +1,7 @@
 :root {
-    --bg-color:#f8f3eb;
-    --text-color:#3b2f2f;
-    --accent-color:#b8864b;
+    --bg-color: #f8f3eb;
+    --text-color: #3b2f2f;
+    --accent-color: #b8864b;
     --card-color: #fffaf3;
     --shadow-color: rgba(0, 0, 0, 0.08);
 
@@ -14,11 +14,11 @@
     --card-color: #302722;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     font-family: sans-serif;
     line-height: 1.6;
@@ -26,7 +26,7 @@ body{
     color: var(--text-color);
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,11 +34,11 @@ header{
     border-bottom: 3px solid var(--accent-color);
 }
 
-.logo h1{
+.logo h1 {
     color: var(--accent-color);
 }
 
-.navigation{
+.navigation {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -52,11 +52,11 @@ header{
     color: var(--text-color);
 }
 
-.navigation a:hover{
+.navigation a:hover {
     color: var(--accent-color);
 }
 
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,10 +64,10 @@ header{
     padding: 18px;
 }
 
-.hero h2{
+.hero h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    
+
 }
 
 .hero p {
@@ -89,7 +89,7 @@ header{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15)
 }
 
-.about{
+.about {
     max-width: 700px;
     margin: 20px auto;
     padding: 30px;
@@ -100,14 +100,14 @@ header{
 
 }
 
-.project-container{
-display: flex;
+.project-container {
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    
+
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -117,12 +117,12 @@ display: flex;
     border: 1px solid var(--accent-color);
     transition: 0.3s ease;
     box-shadow: 0 5px 15px var(--shadow-color);
-   
+
 }
 
 .card:hover {
     transform: translateY(-5px);
-     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .skills ul {
@@ -133,26 +133,26 @@ display: flex;
     list-style: none;
     padding: 0;
 
-    
+
 }
 
-.skills{
+.skills {
     padding: 15px;
     max-width: 600px;
     margin: 20px auto;
 }
 
-.contact{
-   max-width: 600px;
-   margin: 40px auto;
-   padding: 30px;
-   display: flex;
-   flex-direction: column;
-   gap: 15px;
-   background-color: var(--card-color);
-   border: 1px solid var(--accent-color);
-   border-radius: 15px;
-   box-shadow: 0 5px 15px var(--shadow-color);
+.contact {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--card-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
 
 }
 
@@ -169,7 +169,7 @@ display: flex;
     transform: translateX(5px);
 }
 
-footer{
+footer {
     padding: 20px;
     text-align: center;
     border-top: 3px solid var(--accent-color);
@@ -194,7 +194,7 @@ footer{
     color: var(--card-color);
 }
 
-.project-links{
+.project-links {
     display: flex;
     gap: 10px;
     top: 20px;
@@ -243,49 +243,103 @@ footer {
     border-top: 3px solid var(--accent-color);
 }
 
-@media (max-width: 768px) {
- header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
- }
-
- .navigation{
-    gap: 7px;
- }
-
- .hero{
-    padding: 10px;
- }
-
- .card{
-    flex: 1 1 100%;
- }
-
- .about,
-.contact {
-    margin-left: 20px;
-    margin-right: 20px;
+.todo {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
+
+.todo h2 {
+    text-align: center;
+    color: var(--accent-color);
+}
+
+#taskInput {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+#addTaskBtn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: var(--card-color);
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navigation {
+        gap: 7px;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .about,
+    .contact {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
 }
 
 @media (max-width: 480px) {
- 
-    .navigation{
+
+    .navigation {
         flex-direction: column;
         gap: 20px;
         flex-wrap: wrap;
     }
 
     .hero h2 {
-    font-size: 28px;
-}
+        font-size: 28px;
+    }
 
-.project-links {
-    flex-direction: column;
-}
-}
+    .project-links {
+        flex-direction: column;
+    }
 
+    #taskInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
+    #addTaskBtn {
+        width: 100%;
+    }
+}

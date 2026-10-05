@@ -104,9 +104,14 @@ console.log(addTaskBtn);
 console.log(taskList);
 
 
+//delete button
 addTaskBtn.addEventListener("click", () => {
 
     const task = taskInput.value;
+
+    if (task === "") {
+        return;
+    }
 
     const li = document.createElement("li");
     li.textContent = task;
@@ -116,6 +121,8 @@ addTaskBtn.addEventListener("click", () => {
 
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
+
+    taskInput.value = "";
 
     li.addEventListener("click", () => {
         li.style.textDecoration = "line-through";
