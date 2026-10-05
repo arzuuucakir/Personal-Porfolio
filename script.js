@@ -10,6 +10,10 @@ const taskInput = document.getElementById("taskInput")
 const addTaskBtn = document.getElementById("addTaskBtn")
 const taskList = document.getElementById("taskList")
 const deleteBtn = document.createElement("button");
+const userBtn = document.getElementById("userBtn")
+const userCard = document.getElementById("userCard")
+
+
 
 
 
@@ -58,20 +62,20 @@ function showWelcomeMessage(name) {
     console.log("Welcome to " + name + "'s Portfolio! 🚀");
 }
 
-function sayHello(name){
+function sayHello(name) {
     console.log("Hello" + name + "! 👋");
-   
+
 }
 
- sayHello("Arzu")
+sayHello("Arzu")
 
-function changeTitle(){
+function changeTitle() {
     heroTitle.textContent = "Welcome to my Portfolio! 🚀"
 }
 
 
-viewProjects.addEventListener("click" , () => {
-changeTitle()
+viewProjects.addEventListener("click", () => {
+    changeTitle()
 
 
 
@@ -79,29 +83,27 @@ changeTitle()
 
 let count = 0;
 
-function increaseCount(){
+function increaseCount() {
     count = count + 1;
     console.log(count);
-    
+
 }
 
 
-increaseBtn.addEventListener("click" , () => {
+increaseBtn.addEventListener("click", () => {
     increaseCount();
     counter.textContent = count;
 })
 
 let likeCount = 0;
 
-function addLike(){
-    likeCount = likeCount +1;
+function addLike() {
+    likeCount = likeCount + 1;
     likes.textContent = likeCount + " ❤️";
 }
 
 
-console.log(taskInput);
-console.log(addTaskBtn);
-console.log(taskList);
+
 
 
 //delete button
@@ -133,3 +135,40 @@ addTaskBtn.addEventListener("click", () => {
     });
 
 });
+
+userBtn.addEventListener("click", async () => {
+
+    userCard.innerHTML = "<p>Loading...</p>";
+    userBtn.disabled = true;
+    userBtn.textContent = "Loading...";
+
+    try {
+
+        const response = await fetch("https://randomuser.me/api/");
+        const data = await response.json();
+
+        const user = data.results[0];
+
+        const firstName = user.name.first;
+        const lastName = user.name.last;
+        const email = user.email;
+
+        userCard.innerHTML = `
+        <img src="${user.picture.large}" alt="${firstName}">
+        <h3>${firstName} ${lastName}</h3>
+        <p>${email}</p>
+    `;
+
+    } catch (error) {
+
+        console.log(error);
+        userCard.innerHTML = "<p>Something went wrong. Please try again.</p>";
+
+    } finally {
+        userBtn.disabled = false;
+        userBtn.textContent = "Get Random User";
+    }
+
+
+
+})
